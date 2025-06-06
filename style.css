@@ -1,0 +1,260 @@
+
+
+*{
+    margin: 5px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 100%;
+    
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 80px;
+    overflow-x: overlay;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-width: none;
+    /* scrollbar-base-color: black; */
+    /* scrollbar-color: rgb(188, 27, 27);  */
+
+    
+    
+
+}
+
+.box{
+    
+    margin-top: 140px;
+    width: 250px;
+    height: 400px;
+    
+}
+
+.box> img{
+    width: 250px;
+    height: 400px; 
+    object-fit: cover;     
+    
+}
+
+.box:hover{
+    transform: scale3d(1.2, 1.2, 1.2);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.text{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ball{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(120, 131, 160);
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 70px;
+    animation: bounce 1s ease-in-out 1s infinite alternate;
+}
+
+
+@keyframes bounce {
+    from{
+        transform: translateX(50px);
+        /* left: 0; */
+
+    }
+
+    to{
+        transform: translateX(1270px); 
+        /* left: 100%; */
+
+    }
+    
+}
+
+nav{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+}
+
+.head ul{
+    color: white;
+    display: flex;
+    /* position: relative; */
+    /* top: 5px; */
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.head a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 400
+    
+}
+
+.btn{
+    background-color: rgb(184, 208, 208);
+    
+    border: none;
+    border-radius: 20px;
+    padding: 2px 6px;
+    
+}
+
+.grid{
+    max-width: 80vw;
+    margin: auto;
+    height: 100vh;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 200px;
+    row-gap: 50px;
+    
+}
+
+.grid .clothes{
+    height: 266px;
+    width: 200px;
+}
+
+.clothes > img {
+    width: 200px;
+    height: 266px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.clothes > img:hover{
+    transform: translateX(20px);
+    transition: 1s;
+    cursor: pointer;
+}
+
+footer{
+    max-width: 80vw;
+    margin: auto;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin: 10px auto; */
+    /* padding: 10px; */
+    column-gap: 100px;
+    
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.foot a{
+    color: white;
+    text-align: start;
+}
+
+.ques{
+    margin: 10px 1px;
+    padding: 4px;
+    font-weight: bold;
+}
+
+#large{
+    height: 1400px;
+    
+}
+
+@media screen and (max-width: 1300px) {
+    /* body{
+        background-color: aqua;
+    } */
+
+    nav{
+        max-width: 100vw;
+        /* margin: auto; */
+        font-size: 8px;
+
+    }
+
+    .head ul{
+        
+        column-gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        padding: 1px 2px;
+        font-size: 10px;
+    }
+
+    svg{
+        width: 18px;
+    }
+
+    .container{
+        max-width: 90vw;
+        padding: 0 8px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 40px;
+        padding: 10px;
+    }
+
+    @keyframes bounce {
+        from{
+            transform: translateX(10px);
+        }
+
+        to{
+            transform: translateX(370px);
+        }
+        
+    }
+
+    .ball{
+        animation: bounce 1s linear  infinite alternate;
+    }
+
+    footer > .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 90px;
+        align-items: flex-start;
+    }
+
+    #large{
+        height: 1950px;
+    }
+
+    .text{
+        text-align: center;
+        
+    }
+}
+
